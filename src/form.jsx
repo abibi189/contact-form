@@ -40,7 +40,15 @@ export function SubscriberForm() {
           </Icon>
         </Form.Control>
       </Form.Field>
-
+      <Form.Field>
+        <Form.Label>Message</Form.Label>
+        <Form.Textarea
+          value={message}
+          onChange={(e) => {
+            return setMessage(e.target.value);
+          }}
+        />
+      </Form.Field>
       <Form.Field>
         <Form.Label>Subject</Form.Label>
         <Form.Field kind="group">
