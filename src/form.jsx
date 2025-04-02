@@ -40,14 +40,39 @@ export function SubscriberForm() {
         </Form.Control>
       </Form.Field>
 
-      <Form.Control>
-        <Form.Select name="subject">
-        <option value="">Select a subject</option>
-        <option value="support">Support</option>
-        <option value="feedback">Feedback</option>
-        <option value="other">Other</option>
-      </Form.Select>
-      </Form.Control>
+      <Form.Field>
+  <Form.Label>Subject</Form.Label>
+  <Form.Control>
+    <Form.Select
+      name="subject"
+      value={subject}
+      onChange={e => setSubject(e.target.value)}
+      isRounded
+      fullwidth
+    >
+      <option value="">Select a subject</option>
+      <option value="general">General Inquiry</option>
+      <option value="support">Support</option>
+      <option value="feedback">Feedback</option>
+      <option value="other">Other</option>
+    </Form.Select>
+  </Form.Control>
+</Form.Field>
+
+{subject === 'other' && (
+  <Form.Field>
+    <Form.Label>Custom Subject</Form.Label>
+    <Form.Control>
+      <Form.Input
+        name="customSubject"
+        value={customSubject}
+        onChange={e => setCustomSubject(e.target.value)}
+        placeholder="Enter your subject"
+        isRounded
+      />
+    </Form.Control>
+  </Form.Field>
+)}
 
       <Form.Field>
         <Form.Label>Message</Form.Label>
