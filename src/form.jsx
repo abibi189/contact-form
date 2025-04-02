@@ -22,7 +22,6 @@ export function SubscriberForm() {
             <i className="fas fa-check" />
           </Icon>
         </Form.Control>
-        <Form.Help color="success">This username is available</Form.Help>
       </Form.Field>
 
       <Form.Field>
@@ -57,7 +56,7 @@ export function SubscriberForm() {
           </Form.Control>
         </Form.Field>
       </Form.Field>
-      
+
       <Form.Field>
         <Form.Label>Message</Form.Label>
         <Form.Textarea
