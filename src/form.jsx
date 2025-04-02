@@ -57,6 +57,17 @@ export function SubscriberForm() {
           </Form.Control>
         </Form.Field>
       </Form.Field>
+      
+      <Form.Field>
+        <Form.Label>Message</Form.Label>
+        <Form.Textarea
+          name="message"
+          value=""
+          onChange={(e) => {
+            return setMessage(e.target.value); // make sure you define setMessage if using state
+          }}
+        />
+      </Form.Field>
 
       <Form.Field kind="group">
         <Form.Control>
