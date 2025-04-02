@@ -39,7 +39,6 @@ export function SubscriberForm() {
             <i className="fas fa-exclamation-triangle" />
           </Icon>
         </Form.Control>
-        <Form.Help color="danger">This email is invalid</Form.Help>
       </Form.Field>
 
       <Form.Field>
